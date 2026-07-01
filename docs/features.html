@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — EBSD Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top nav ===== -->
+  <nav class="nav">
+    <a class="brand" href="index.html" style="text-decoration:none;color:inherit;"><span class="dot"></span> EBSD Analyzer</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <!-- ===== Page header ===== -->
+  <header class="section-head">
+    <h1>Features</h1>
+    <p>A five-stage pipeline that takes a raw EBSD scan all the way to a PowerPoint report.</p>
+  </header>
+
+  <!-- ===== Feature cards (2 × 3 grid) ===== -->
+  <section class="features">
+    <div class="features-inner">
+
+      <div class="feature">
+        <span class="num">Stage 1</span>
+        <h3>Load &amp; Resample</h3>
+        <p>Read TSL <code>.ang</code> scans and resample the hexagonal measurement grid to a square grid for downstream analysis.</p>
+      </div>
+
+      <div class="feature">
+        <span class="num">Stage 2</span>
+        <h3>Microstructure</h3>
+        <p>Compute IQ, CI, and IPF maps with grain-boundary detection, plus optional low-CI noise cleanup for accurate maps.</p>
+      </div>
+
+      <div class="feature">
+        <span class="num">Stage 3</span>
+        <h3>Grain Size</h3>
+        <p>Segment grains with union-find and measure grain size following the ASTM E2627 standard.</p>
+      </div>
+
+      <div class="feature">
+        <span class="num">Stage 4</span>
+        <h3>Texture (ODF)</h3>
+        <p>Build a GSH-based orientation distribution function with φ₂ sections and α/γ fiber plots.</p>
+      </div>
+
+      <div class="feature">
+        <span class="num">Stage 5</span>
+        <h3>Report</h3>
+        <p>Export every figure and result table to a formatted PowerPoint deck in a single click.</p>
+      </div>
+
+      <div class="feature">
+        <span class="num">Bonus</span>
+        <h3>Zero setup</h3>
+        <p>One installer builds a self-contained environment from conda-forge — no Python or conda knowledge required.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    EBSD Analyzer · GPL-3.0
+  </footer>
+
+</body>
+</html>
