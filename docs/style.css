@@ -1,0 +1,111 @@
+/* ============================================================
+   EBSD Analyzer — landing page
+   Warm mineral theme · icon-free · clean typography
+   All colors live in the :root variables below — change those
+   to re-theme the whole page in one place.
+   ============================================================ */
+:root {
+  --bg:        #fbf7f0;
+  --bg-alt:    #f3ebdd;
+  --panel:     #f6efe3;
+  --text:      #3a2f26;
+  --text-soft: #7a6a58;
+  --accent:    #d2691e;
+  --accent-2:  #a8500f;
+  --border:    #e6d8c2;
+  --btn-text:  #ffffff;
+  --shadow:    0 10px 30px rgba(210,105,30,.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---- Top navigation ---- */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem clamp(1.5rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: .55rem; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+.brand .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--accent); }
+.nav-links { display: flex; gap: 1.6rem; font-size: .92rem; }
+.nav-links a { color: var(--text-soft); text-decoration: none; }
+.nav-links a:hover { color: var(--accent); }
+
+/* ---- Hero (split two-column) ---- */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  max-width: 1150px; margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+.eyebrow {
+  display: inline-block; font-size: .78rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 1rem;
+}
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 1.1rem; letter-spacing: -.02em; }
+.hero p.lead { font-size: 1.12rem; color: var(--text-soft); margin-bottom: 2rem; max-width: 34ch; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 1.6rem; }
+.btn {
+  display: inline-flex; align-items: center;
+  padding: .8rem 1.6rem; border-radius: 10px; font-size: 1rem; font-weight: 600;
+  text-decoration: none; border: 2px solid transparent; transition: transform .12s, background .12s, color .12s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--accent); color: var(--btn-text); box-shadow: var(--shadow); }
+.btn-primary:hover { background: var(--accent-2); }
+.btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn-outline:hover { background: var(--accent); color: var(--btn-text); }
+
+.meta { font-size: .85rem; color: var(--text-soft); }
+.meta code { background: var(--panel); padding: .1rem .45rem; border-radius: 5px; }
+
+/* ---- Hero image / screenshot placeholder ---- */
+.shot {
+  aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.15), transparent 60%),
+    repeating-conic-gradient(from 0deg,
+      var(--accent) 0deg 15deg, var(--accent-2) 15deg 30deg);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+}
+.shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shot .label {
+  background: rgba(0,0,0,.5); color: #fff; font-size: .82rem;
+  padding: .4rem .8rem; border-radius: 8px;
+}
+
+/* ---- Features strip (text-only, accent rule under each heading) ---- */
+.features {
+  background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.features-inner {
+  max-width: 1150px; margin: 0 auto; padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.feature h3 {
+  font-size: 1.08rem; margin-bottom: .7rem; padding-bottom: .55rem;
+  border-bottom: 2px solid var(--accent); display: inline-block;
+}
+.feature p { font-size: .95rem; color: var(--text-soft); }
+
+/* ---- Footer ---- */
+footer {
+  text-align: center; padding: 2.2rem 1.5rem; color: var(--text-soft); font-size: .88rem;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* ---- Responsive ---- */
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; }
+  .features-inner { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
