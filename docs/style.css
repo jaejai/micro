@@ -69,7 +69,7 @@ body {
 
 /* ---- Hero image / screenshot placeholder ---- */
 .shot {
-  aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden;
+  aspect-ratio: 2191 / 1756; border-radius: 14px; overflow: hidden;
   background:
     radial-gradient(circle at 30% 30%, rgba(255,255,255,.15), transparent 60%),
     repeating-conic-gradient(from 0deg,
