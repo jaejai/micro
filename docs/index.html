@@ -3,47 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EBSD Analyzer</title>
+  <title>Tools &amp; Code</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ===== Top nav ===== -->
   <nav class="nav">
-    <div class="brand"><span class="dot"></span> EBSD Analyzer</div>
+    <a class="brand" href="index.html" style="text-decoration:none;color:inherit;"><span class="dot"></span> Tools &amp; Code</a>
     <div class="nav-links">
-      <a href="features.html">Features</a>
+      <a href="features.html">EBSD Features</a>
+      <a href="#downloads">Downloads</a>
     </div>
   </nav>
 
-  <!-- ===== Hero (split) ===== -->
-  <section class="hero">
-    <div class="hero-text">
-      <span class="eyebrow">Electron Backscatter Diffraction</span>
-      <h1>EBSD Analyzer</h1>
-      <!-- EDIT ME: one–two sentence description of your tool -->
-      <p class="lead">Analyze EBSD data — measure grain size, map crystal orientation, and visualize phase distribution from your microscope scans, then export a PowerPoint report.</p>
+  <!-- ===== Intro ===== -->
+  <header class="section-head">
+    <h1>Tools &amp; code</h1>
+    <p>Scientific software you can download and run.</p>
+  </header>
 
-      <div class="btn-row">
-        <!-- Currently downloads the repo's main branch as a zip.
-             Once you publish a Release (v1.0), swap this href to:
-             https://github.com/jaejai/micro/releases/latest -->
-        <a class="btn btn-primary" href="https://github.com/jaejai/micro/archive/refs/heads/main.zip">Download</a>
+  <!-- ===== Downloads grid ===== -->
+  <section id="downloads">
+    <div class="downloads-inner">
+
+      <!-- Project 1: EBSD Analyzer (real) -->
+      <div class="dl-card">
+        <h3>EBSD Analyzer</h3>
+        <p class="desc">Analyze EBSD data — grain size, orientation maps, GSH-based ODF texture, and one-click PowerPoint reports.</p>
+        <p class="card-meta">Python · GPL-3.0 · <code>v1.0</code></p>
+        <!-- Points at the EBSD code repo's latest Release.
+             Works once that repo + a Release exist. -->
+        <a class="btn btn-primary" href="https://github.com/jaejai/ebsd-analyzer/releases/latest">Download</a>
       </div>
 
-      <p class="meta">Python · GPL-3.0 · <code>v1.0</code></p>
-    </div>
-
-    <div class="hero-image">
-      <div class="shot">
-        <img src="images/screen.png" alt="EBSD Analyzer application — Load &amp; Resample stage">
+      <!-- Placeholder for a future project. Duplicate this block per new tool. -->
+      <div class="dl-card soon">
+        <h3>Coming soon</h3>
+        <p class="desc">A future tool will appear here.</p>
+        <p class="card-meta">—</p>
+        <span class="btn">Soon</span>
       </div>
+
+      <div class="dl-card soon">
+        <h3>Coming soon</h3>
+        <p class="desc">A future tool will appear here.</p>
+        <p class="card-meta">—</p>
+        <span class="btn">Soon</span>
+      </div>
+
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer>
-    EBSD Analyzer · GPL-3.0
+    Tools &amp; Code
   </footer>
 
 </body>

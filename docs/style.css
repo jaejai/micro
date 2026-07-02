@@ -118,6 +118,34 @@ footer a { color: var(--accent); text-decoration: none; }
 }
 .feature code { background: var(--panel); padding: .05rem .35rem; border-radius: 4px; font-size: .88em; }
 
+/* ---- Screenshot showcase (features page) ---- */
+.showcase { max-width: 920px; margin: 2.2rem auto 0; padding: 0 clamp(1.5rem, 5vw, 4rem); }
+.showcase img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+}
+.showcase figcaption { text-align: center; font-size: .85rem; color: var(--text-soft); margin-top: .7rem; }
+
+/* ---- Downloads hub grid ---- */
+.downloads-inner {
+  max-width: 1150px; margin: 0 auto;
+  padding: 2rem clamp(1.5rem, 5vw, 4rem) 4rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.dl-card {
+  display: flex; flex-direction: column;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.6rem;
+}
+.dl-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+.dl-card .desc { color: var(--text-soft); font-size: .95rem; margin-bottom: 1rem; flex-grow: 1; }
+.dl-card .card-meta { font-size: .8rem; color: var(--text-soft); margin-bottom: 1.2rem; }
+.dl-card .card-meta code { background: var(--bg-alt); padding: .1rem .4rem; border-radius: 5px; }
+.dl-card .btn { align-self: flex-start; padding: .65rem 1.4rem; font-size: .95rem; }
+/* placeholder cards for future projects */
+.dl-card.soon { opacity: .65; border-style: dashed; }
+.dl-card.soon .btn { background: var(--border); color: var(--text-soft); cursor: default; box-shadow: none; }
+
 /* ---- Responsive ---- */
 @media (max-width: 780px) {
   .hero { grid-template-columns: 1fr; }
